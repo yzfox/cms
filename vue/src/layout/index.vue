@@ -2,7 +2,7 @@
   <div class="app-wrapper">
     <el-container>
       <!-- 侧边栏 -->
-      <el-aside :width="isCollapse ? '64px' : '200px'" class="sidebar-container">
+      <el-aside :width="isCollapse ? '64px' : '200px'" :class="['sidebar-container', { 'collapse': isCollapse }]">
         <div class="sidebar-logo" v-if="!isCollapse">
           <el-icon :size="30" color="#fff"><House /></el-icon>
           <span class="logo-title">人口普查系统</span>
@@ -239,7 +239,7 @@
       </el-aside>
       
       <!-- 主体区域 -->
-      <el-container>
+      <el-container class="main-layout">
         <!-- 头部 -->
         <el-header class="header-container">
           <div class="header-left">
@@ -455,7 +455,10 @@ export default {
   background-color: #545c64;
   transition: width 0.28s;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
   z-index: 1001;
   border-right: 1px solid #e6e6e6;
 }
@@ -615,6 +618,20 @@ export default {
 
 .user-menu-item .el-icon {
   color: #67C23A;
+}
+
+/* 主体布局 */
+.main-layout {
+  margin-left: 200px;
+  transition: margin-left 0.28s;
+  width: calc(100% - 200px);
+  height: 100vh;
+}
+
+/* 折叠状态下的主体布局 */
+.el-aside.collapse + .main-layout {
+  margin-left: 64px;
+  width: calc(100% - 64px);
 }
 
 /* 响应式设计 */

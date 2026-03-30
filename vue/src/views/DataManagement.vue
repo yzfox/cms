@@ -563,7 +563,7 @@
       </el-tabs>
       
       <!-- 分页 -->
-      <div class="common-pagination">
+      <div class="common-pagination" v-if="activeTab !== 'overview'">
         <el-pagination
           @size-change="handleSizeChange"
           @current-change="handleCurrentChange"

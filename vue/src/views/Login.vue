@@ -19,7 +19,7 @@
             <circle cx="50" cy="32" r="11" fill="currentColor"/>
             <path d="M50 46 C37 46 28 55 28 68 L28 73 C28 76 30 78 33 78 L67 78 C70 78 72 76 72 73 L72 68 C72 55 63 46 50 46 Z" fill="currentColor"/>
             <circle cx="32" cy="40" r="9" fill="currentColor" opacity="0.6"/>
-            <path d="M32 51 C22 51 15 58 15 68 L15 71 C15 73 16 74 18 74 L32 74 L32 68 C32 61 35 55 40 51 C37 51 35 51 32 51 Z" fill="currentColor" opacity="0.6"/>
+            <path d="M32 51 C22 51 15 58 15 68 L15 71 C15 73 16 74 18 74 L32 74 L32 68 C3261 35 55 40 51 C37 51 35 51 32 51 Z" fill="currentColor" opacity="0.6"/>
             <circle cx="68" cy="40" r="9" fill="currentColor" opacity="0.6"/>
             <path d="M68 51 C78 51 85 58 85 68 L85 71 C85 73 84 74 82 74 L68 74 L68 68 C68 61 65 55 60 51 C63 51 65 51 68 51 Z" fill="currentColor" opacity="0.6"/>
           </svg>
