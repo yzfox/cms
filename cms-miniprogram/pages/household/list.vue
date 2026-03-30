@@ -123,7 +123,7 @@ export default {
     return {
       // 加载状态
       loading: false,
-      // 搜索关键词
+      // 搜索关键词下
       keyword: '',
       // 户籍列表
       households: [],
