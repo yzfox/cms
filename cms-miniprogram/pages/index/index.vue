@@ -164,14 +164,14 @@ export default {
 
       // 功能模块数据
       modules: [
-        { title: '户籍管理', desc: '管理户籍相关信息', icon: 'document', bgClass: 'bg-blue', glowColor: 'rgba(0, 91, 234, 0.3)', url: '/pages/household/list' },
+        { title: '户籍管理', desc: '管理户籍相关信息', icon: 'contact', bgClass: 'bg-blue', glowColor: 'rgba(0, 91, 234, 0.3)', url: '/pages/household/list' },
         { title: '居民管理', desc: '管理居民基本信息', icon: 'person', bgClass: 'bg-cyan', glowColor: 'rgba(0, 198, 251, 0.3)', url: '/pages/resident/list' },
-        { title: '教育管理', desc: '管理教育相关信息', icon: 'book', bgClass: 'bg-teal', glowColor: 'rgba(0, 229, 255, 0.3)', url: '/pages/education/list' },
+        { title: '教育管理', desc: '管理教育相关信息', icon: 'font', bgClass: 'bg-teal', glowColor: 'rgba(0, 229, 255, 0.3)', url: '/pages/education/list' },
         { title: '医疗管理', desc: '管理医疗相关信息', icon: 'heart', bgClass: 'bg-indigo', glowColor: 'rgba(99, 102, 241, 0.3)', url: '/pages/medical/list' },
-        { title: '就业管理', desc: '管理就业相关信息', icon: 'briefcase', bgClass: 'bg-blue-light', glowColor: 'rgba(79, 172, 254, 0.3)', url: '/pages/employment/list' },
+        { title: '就业管理', desc: '管理就业相关信息', icon: 'auth', bgClass: 'bg-blue-light', glowColor: 'rgba(79, 172, 254, 0.3)', url: '/pages/employment/list' },
         { title: '社保管理', desc: '管理社保相关信息', icon: 'medal', bgClass: 'bg-sky', glowColor: 'rgba(0, 242, 254, 0.3)', url: '/pages/social-security/list' },
         { title: '房产管理', desc: '管理房产相关信息', icon: 'home', bgClass: 'bg-azure', glowColor: 'rgba(0, 123, 255, 0.3)', url: '/pages/property/list' },
-        { title: '车辆管理', desc: '管理车辆相关信息', icon: 'car', bgClass: 'bg-green', glowColor: 'rgba(0, 229, 255, 0.3)', url: '/pages/vehicle/list' }
+        { title: '车辆管理', desc: '管理车辆相关信息', icon: 'navigate', bgClass: 'bg-green', glowColor: 'rgba(0, 229, 255, 0.3)', url: '/pages/vehicle/list' }
       ],
       // 快速入口数据
       quickActions: [
