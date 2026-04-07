@@ -132,7 +132,7 @@
 </template>
 
 <script>
-import { put } from '@/utils/request'
+import { post } from '@/utils/request'
 
 export default {
   data() {
@@ -265,7 +265,7 @@ export default {
       this.loading = true
       
       // 调用修改密码API
-      put('/api/user/changePassword', {
+      post('/api/auth/changePassword', {
         oldPassword: this.form.oldPassword,
         newPassword: this.form.newPassword
       })

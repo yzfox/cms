@@ -201,6 +201,65 @@ public class AuthController extends BaseController {
             return error("获取用户信息失败：" + e.getMessage());
         }
     }
+    
+    /**
+     * 修改密码
+     */
+    @PostMapping("/changePassword")
+    public Result<Object> changePassword(@RequestHeader("Authorization") String authHeader, @RequestBody ChangePasswordBody changePasswordBody) {
+        try {
+            // 提取Token（去除"Bearer "前缀）
+            String token = authHeader.startsWith("Bearer ") ? authHeader.substring(7) : authHeader;
+            
+            // 获取当前用户
+            com.example.cms.modules.system.entity.User currentUser = authService.getCurrentUser(token);
+            if (currentUser == null) {
+                return error("Token无效或已过期");
+            }
+            
+            // 验证当前密码
+            boolean passwordValid = userService.checkPassword(currentUser.getUsername(), changePasswordBody.getOldPassword());
+            if (!passwordValid) {
+                return error("当前密码错误");
+            }
+            
+            // 更新密码
+            currentUser.setPassword(changePasswordBody.getNewPassword());
+            int result = userService.update(currentUser);
+            
+            if (result > 0) {
+                return success("密码修改成功");
+            } else {
+                return error("密码修改失败");
+            }
+        } catch (Exception e) {
+            return error("修改密码时发生错误：" + e.getMessage());
+        }
+    }
+}
+
+/**
+ * 修改密码请求体
+ */
+class ChangePasswordBody {
+    private String oldPassword;
+    private String newPassword;
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
 }
 
 /**
