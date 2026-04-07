@@ -237,12 +237,7 @@
         "navigationBarTitleText": "编辑资料"
       }
     },
-    {
-      "path": "pages/setting/feedback",
-      "style": {
-        "navigationBarTitleText": "意见反馈"
-      }
-    }
+
   ],
   "globalStyle": {
     "navigationBarTextStyle": "white",

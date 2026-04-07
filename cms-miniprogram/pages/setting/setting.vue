@@ -61,13 +61,7 @@
             </view>
             <uni-icons type="arrowright" size="20" color="#999"></uni-icons>
           </view>
-          <view class="setting-item" @click="handleFeedback">
-            <view class="setting-item-left">
-              <uni-icons type="chatbubble" size="24" color="#667eea" class="setting-icon"></uni-icons>
-              <text class="setting-item-text">意见反馈</text>
-            </view>
-            <uni-icons type="arrowright" size="20" color="#999"></uni-icons>
-          </view>
+
         </view>
         
         <!-- 退出登录 -->
@@ -169,12 +163,7 @@ export default {
       })
     },
     
-    // 意见反馈
-    handleFeedback() {
-      uni.navigateTo({
-        url: '/pages/setting/feedback'
-      })
-    },
+
     
     // 退出登录
     handleLogout() {
